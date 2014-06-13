@@ -31,7 +31,9 @@ class Hash
   private
 
   def camelize_key(k, first_upper = true)
-    if k.is_a? Symbol
+    if k == "ver_1"
+      k = "Ver_1"
+    elsif k.is_a? Symbol
       camelize(k.to_s, first_upper).to_sym
     elsif k.is_a? String
       camelize(k, first_upper)
