@@ -33,6 +33,12 @@ class Hash
   def camelize_key(k, first_upper = true)
     if k == "ver_1"
       k = "Ver_1"
+    elsif k == "ver_2"
+      k = "Ver_2"
+    elsif k == "ver_3"
+      k = "Ver_3"
+    elsif k == "ver_4"
+      k = "Ver_4"
     elsif k.is_a? Symbol
       camelize(k.to_s, first_upper).to_sym
     elsif k.is_a? String
